@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top-section{
+    background-image: url('../../images/Background.png');
+    background-repeat: no-repeat;  
+    background-size: 100% auto; 
+    background-position: top 0px center; 
+    padding-top: 30px;
+    min-height: 100vh;
+    width: 100%;
+}
+nav a:hover {
+    color: #007BFF;
+}
+nav a{
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+nav{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: auto;
+    display: flex;
+    gap: 55px;
+}
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    z-index: 1000;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: transparent;
+}
+.logo-container {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.logo-container img {
+    height: 50px;      
+    width: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.slogan {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-start {
+    background-color: #00a88f;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn-start:hover {
+    background-color: #008f79;
+}
+
+.user-profile {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.user-icon {
+    width: 24px;
+    height: 24px;
+    fill: #00a88f;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    padding: 40px 60px;             
+    max-width: 1400px;           
+    margin: 0 auto;              
+}
+
+.hero-left, .hero-right {
+    flex: 1;                     
+    min-width: 300px;         
+}
+
+.mascot-wrapper {
+    flex: 1.2;                    
+    justify-content: center;    
+    align-items: center;
+}
+
+.owl-img {
+    width: 100%;
+    max-width: 470px; 
+    height: auto;
+    object-fit: contain;
+    transform: translate(34px, 49px);
+}
