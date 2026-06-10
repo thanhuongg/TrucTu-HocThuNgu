@@ -16,20 +16,24 @@
 ## 📁 Cấu trúc dự án
 
 ```
-truc-tu/
-├── index.html              # Landing page chính
-├── style.css               # Toàn bộ CSS
-├── main.js                 # Animation, navbar, tương tác
-│
-└── assets/
-    └── images/
-        ├── owl-mascot.png  # Mascot cú 3D (clay art style)
-        ├── avatar-1.png    # Ảnh card "Nhìn & Hiểu"
-        ├── avatar-2.png    # Ảnh card "Ký & Phản hồi"
-        ├── avatar-3.png    # Ảnh card "Biểu cảm & Cảm xúc"
-        ├── plant-left.png  # Cây trang trí góc trái
-        ├── plant-right.png # Cây trang trí góc phải
-        └── favicon.png     # Icon tab trình duyệt
+frontend/
+├── index.html                   # Landing page chính
+├── src/
+│   ├── styles/
+│   │   ├── main.css             # Toàn bộ CSS landing page
+│   │   └── auth.css             # CSS authentication modal
+│   └── scripts/
+│       └── auth.js              # Logic auth modal (toggle, validation)
+├── images/
+│   ├── logo.png                 # Logo Trúc Tự
+│   ├── owl-mascot.png           # Mascot cú 3D (clay art style)
+│   ├── avatar-1.png             # Ảnh card "Nhìn & Hiểu"
+│   ├── avatar-2.png             # Ảnh card "Ký & Phản hồi"
+│   ├── avatar-3.png             # Ảnh card "Biểu cảm & Cảm xúc"
+│   ├── plant-left.png           # Cây trang trí góc trái
+│   ├── plant-right.png          # Cây trang trí góc phải
+│   └── favicon.png              # Icon tab trình duyệt
+└── README.md                    # Tài liệu dự án
 ```
 
 ---
@@ -66,17 +70,24 @@ truc-tu/
 ### 1. Navbar
 - Logo "T" + tên + tagline
 - Menu: Cộng đồng / Lộ trình / Học tập / Tài nguyên
-- CTA button "Bắt đầu học →"
+- CTA button "Bắt đầu học →" (mở auth modal)
 - Sticky + blur khi scroll
 
 ### 2. Hero
 Layout 3 phần:
-- **Trái:** Badge + heading 3 dòng + tagline màu + mô tả + 2 nút + social proof
+- **Trái:** Badge + heading 3 dòng + tagline màu + mô tả + 1 nút CTA + social proof
 - **Giữa:** Con cú mascot (`position: absolute`, animation float)
 - **Phải:** 3 feature cards (Nhìn & Hiểu / Ký & Phản hồi / Biểu cảm & Cảm xúc)
 
 ### 3. Stats Bar
 4 cột: Cộng đồng thân thiện · Bài học sinh động · Lộ trình cá nhân hóa · An toàn & Tôn trọng
+
+### 4. Authentication Modal
+- Tab-based interface (Đăng nhập / Đăng ký)
+- Form validation (email, password, confirm password)
+- Password visibility toggle
+- Forgot password link (placeholder)
+- Accessibility attributes (aria-labels, roles)
 
 ---
 
@@ -86,10 +97,10 @@ Không cần cài đặt gì. Mở thẳng file:
 
 ```bash
 # Cách 1: Mở trực tiếp
-open index.html
+open frontend/index.html
 
 # Cách 2: Dùng Live Server (VS Code extension)
-# Click chuột phải vào index.html → Open with Live Server
+# Click chuột phải vào frontend/index.html → Open with Live Server
 ```
 
 > **Lưu ý:** Nên dùng Live Server thay vì mở file trực tiếp để tránh lỗi CORS khi load ảnh/font.
@@ -99,11 +110,12 @@ open index.html
 ## 🗺️ Lộ trình phát triển
 
 - [x] Landing page (UI tĩnh)
+- [x] Authentication modal UI (login & register tabs)
+- [ ] Auth logic và backend integration
 - [ ] Trang danh sách chủ đề học
 - [ ] Trang bài học từ vựng (flashcard)
 - [ ] Tích hợp MediaPipe nhận diện tay qua camera
 - [ ] Pipeline avatar 3D (MediaPipe → Three.js → VRoid)
-- [ ] Backend + tài khoản người dùng
 - [ ] Hệ thống streak và gamification
 
 ---
